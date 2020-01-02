@@ -10,14 +10,14 @@ import io.swagger.annotations.ApiOperation;
 
 @Api(value = "Greeting")
 public interface GreetingService {
-   @ApiOperation(value = "Greets the world")
+   @ApiOperation(value = "Just greets the world")
    @GetMapping(
       value = "/hello",
       produces = "application/json"
    )
    Greeting hello();
 
-   @ApiOperation(value = "Greets a person given her name")
+   @ApiOperation(value = "Greets a person given a name")
    @GetMapping(
       value = "/hello/{name}",
       produces = "application/json"

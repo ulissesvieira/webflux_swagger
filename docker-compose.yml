@@ -1,0 +1,10 @@
+version: '2.1'
+
+services:
+   greeting:
+      build: greeting-service
+      mem_limit: 350m
+      ports:
+         - "8080:8080"
+      environment: 
+         - SPRING_PROFILES_ACTIVE=docker

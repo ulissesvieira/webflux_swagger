@@ -1,5 +1,4 @@
 api:
-
    common:
      version: 1.0.0
      title: Sample API
@@ -13,4 +12,15 @@ api:
        url: My 
        email: me@mail.com 
 
-spring.resources.add-mappings: true 
+server.port: 7000
+
+logging:
+  level:
+    root: INFO
+    com.wf: DEBUG 
+
+---
+
+spring.profiles: docker
+
+server.port: 8080
