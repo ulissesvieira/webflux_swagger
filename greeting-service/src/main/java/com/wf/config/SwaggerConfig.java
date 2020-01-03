@@ -1,7 +1,6 @@
 package com.wf.config;
 
 import static java.util.Collections.emptyList;
-import static springfox.documentation.builders.RequestHandlerSelectors.basePackage;
 import static org.springframework.web.bind.annotation.RequestMethod.DELETE;
 import static org.springframework.web.bind.annotation.RequestMethod.GET;
 import static org.springframework.web.bind.annotation.RequestMethod.POST;
@@ -41,7 +40,6 @@ public class SwaggerConfig {
       return new Docket(DocumentationType.SWAGGER_2)
          .select()
          .apis(RequestHandlerSelectors.any())
-         //.apis(basePackage("com.wf.api"))
          .paths(PathSelectors.any())
          .build()
             .globalResponseMessage(POST, emptyList())
