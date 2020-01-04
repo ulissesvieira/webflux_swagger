@@ -1,6 +1,23 @@
 version: '2.1'
 
 services:
+   # $ mysql -uroot -h127.0.0.1 -p
+   mysql:
+      image: mysql
+      mem_limit: 350m
+      ports:
+         - "3306:3306"
+      environment:
+         - MYSQL_ROOT_PASSWORD=rootpwd
+         - MYSQL_DATABASE=greeting-db
+         - MYSQL_USER=user
+         - MYSQL_PASSWORD=pwd
+      healthcheck:
+         test: "/usr/bin/mysql --user=user --password=pwd --execute \"SHOW DATABASES;\""
+         interval: 10s
+         timeout: 5s
+         retries: 10
+
    greeting:
       build: greeting-service
       mem_limit: 350m

@@ -1,4 +1,4 @@
-package com.wf.util.exceptions;
+package com.wf.exceptions;
 
 public class NotFoundException extends RuntimeException {
     public NotFoundException() {

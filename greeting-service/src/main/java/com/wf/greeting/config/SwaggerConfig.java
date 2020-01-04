@@ -1,9 +1,10 @@
-package com.wf.config;
+package com.wf.greeting.config;
 
 import static java.util.Collections.emptyList;
 import static org.springframework.web.bind.annotation.RequestMethod.DELETE;
 import static org.springframework.web.bind.annotation.RequestMethod.GET;
 import static org.springframework.web.bind.annotation.RequestMethod.POST;
+import static springfox.documentation.builders.RequestHandlerSelectors.basePackage;
 
 import org.springframework.beans.factory.annotation.Value;
 import org.springframework.context.annotation.Bean;
@@ -17,8 +18,8 @@ import springfox.documentation.spi.DocumentationType;
 import springfox.documentation.spring.web.plugins.Docket;
 import springfox.documentation.swagger2.annotations.EnableSwagger2WebFlux;
 
-@Configuration
 @EnableSwagger2WebFlux
+@Configuration
 public class SwaggerConfig {
    @Value("${api.common.version}")           String apiVersion;
 	@Value("${api.common.title}")             String apiTitle;
@@ -40,6 +41,7 @@ public class SwaggerConfig {
       return new Docket(DocumentationType.SWAGGER_2)
          .select()
          .apis(RequestHandlerSelectors.any())
+         //.apis(basePackage("com.wf"))
          .paths(PathSelectors.any())
          .build()
             .globalResponseMessage(POST, emptyList())

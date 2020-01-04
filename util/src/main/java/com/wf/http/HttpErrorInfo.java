@@ -1,4 +1,4 @@
-package com.wf.util.http;
+package com.wf.http;
 
 import org.springframework.http.HttpStatus;
 

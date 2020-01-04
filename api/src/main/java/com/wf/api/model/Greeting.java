@@ -1,4 +1,4 @@
-package com.wf.model;
+package com.wf.api.model;
 
 public class Greeting {
    private String message;

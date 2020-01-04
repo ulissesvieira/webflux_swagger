@@ -1,6 +1,6 @@
-package com.wf.api;
+package com.wf.api.service;
 
-import com.wf.model.Greeting;
+import com.wf.api.model.Greeting;
 
 import org.springframework.web.bind.annotation.GetMapping;
 import org.springframework.web.bind.annotation.PathVariable;
