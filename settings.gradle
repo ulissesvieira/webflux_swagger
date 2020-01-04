@@ -3,7 +3,4 @@ rootProject.name = 'spring-webflux'
 include ':api'
 include ':util'
 include ':greeting-service'
-
-/*project(':api').projectDir = file('api')
-project(':util').projectDir = file('util')
-project(':greeting-service').projectDir = file('greeting-service')*/
+include ':app'

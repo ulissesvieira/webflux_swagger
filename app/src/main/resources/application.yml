@@ -1,0 +1,37 @@
+
+api:
+   common:
+     version: 1.0.0
+     title: Sample API
+     description: Description of the API...
+     termsOfServiceUrl: MINE TERMS OF SERVICE URL
+     license: License
+     licenseUrl: MY LICENSE URL
+ 
+     contact: 
+       name: Contact 
+       url: My 
+       email: me@mail.com 
+
+server.port: 7000
+
+app:
+   greeting-service:
+      host: localhost 
+      port: 7001 
+
+logging:
+  level:
+    root: INFO
+    com.wf: DEBUG 
+
+---
+
+spring.profiles: docker
+
+server.port: 8080
+
+app:
+   greeting-service:
+      host: greeting 
+      port: 8080

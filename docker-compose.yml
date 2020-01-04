@@ -18,8 +18,8 @@ services:
          timeout: 5s
          retries: 10
 
-   greeting:
-      build: greeting-service
+   app:
+      build: app
       mem_limit: 350m
       ports:
          - "8080:8080"
